@@ -40,7 +40,9 @@ The first one contains a config.txt file to store the chosen configuration, a en
 ## Other Resources
 
 In `genome`, you may find fasta files of the designed sequences that where kept for further investigation in the study. They are made of 7 repetitions of the designed sequence, flanked on each side by the 4kb region where they were inserted in the genome of *S. Cerevisiae*.
+
 The bash scripts `alignment_pipeline.sh` and `alignment_postprocessing.sh` contain the command lines used to derive the nucleosome densities from the raw MNase fastq files.
+
 Finally, you may also find the script `predict_on_repeats.py` which extracts the designed sequences from the fasta files to make predictions with the deep learning model.
 
 ## Environment
