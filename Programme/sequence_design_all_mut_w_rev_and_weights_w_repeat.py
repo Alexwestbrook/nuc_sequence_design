@@ -441,7 +441,7 @@ def _parse_arguments(args=None):
     parser.add_argument('-r', '--repeat', default=1,
                         help='''the number of artificial sequence we want to
                         predict on''')
-    parser.add_argument('-s', '--steps', default=10000,
+    parser.add_argument('-s', '--steps', default=100,
                         help='''Number of KMC iterations.''')
     parser.add_argument('-m', '--model',
                         default="weights_with_rev_compl_rep2.hdf5",
