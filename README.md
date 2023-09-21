@@ -26,6 +26,7 @@ The command are as follows :
   - -g or --gauss : amplitude and background of the gaussian target (default [0.4, 0.2])
 
 The model file must be stored in `Results_nucleosome`, where the model used in this study is provided.
+
   ------------------
 
 
@@ -58,4 +59,4 @@ For the bash scripts, the following packages have been used:
 - cutadapt 3.4
 - bowtie 2.2.5
 - samtools 1.10
-- bamCoverage3.5.1
+- bamCoverage 3.5.1
