@@ -54,6 +54,7 @@ All python scripts have been run with python3.8 with the following packages:
 - seaborn 0.11.2
 - pysam 0.16.0.1
 - pyBigWig 0.3.18
+
 For using tensorflow with GPU support, we used cudatoolkit11.3.1 for a GPU NVIDIA GeForce RTX 2080 Ti
 
 For the bash scripts, the following packages have been used:
