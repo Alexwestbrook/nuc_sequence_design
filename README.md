@@ -55,7 +55,7 @@ All python scripts have been run with python3.8 with the following packages:
 - pysam 0.16.0.1
 - pyBigWig 0.3.18
 
-For using tensorflow with GPU support, we used cudatoolkit11.3.1 for a GPU NVIDIA GeForce RTX 2080 Ti
+For using tensorflow with GPU support, we used cudatoolkit 11.3.1 for a GPU NVIDIA GeForce RTX 2080 Ti
 
 For the bash scripts, the following packages have been used:
 - sratoolkit 3.0.0
