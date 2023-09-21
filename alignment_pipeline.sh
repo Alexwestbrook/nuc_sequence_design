@@ -105,7 +105,7 @@
 # threads=16
 # for file in MNase_*/*_trimfiltered_max250.sorted.bam
 # do
-#     bamCoverage -p $threads -b $file -o "${file%%.*}"_140-170_CPM.bw --binSize 1 --minFragmentLength 140 --maxFragmentLength 170 --normalizeUsing CPM
+#     bamCoverage -p $threads -b $file -o "${file%%.*}"_140-170_CPM.bw --binSize 1 --minFragmentLength 140 --maxFragmentLength 170 --extendReads --normalizeUsing CPM
 # done
 
 # data_dir=MNase_601
