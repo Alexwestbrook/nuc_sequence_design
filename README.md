@@ -25,7 +25,7 @@ The command are as follows :
   - -w or --weights : the weights used in the energy function [a, b, c, d] with a for the CG content energy, b for the positioning energy in the direct strand, c for the energy in the reverse strand and d for the mutation energy (default [1, 1, 1, 1])
   - -g or --gauss : amplitude and background of the gaussian target (default [0.4, 0.2])
 
-The model file must be stored in `Results_nucleosome`, where the model used in this study is provided.
+The model file must be stored in `Results_nucleosome`, where the model used in this study is provided (`weights_with_rev_compl_rep2.hdf5`).
 
   ------------------
 
