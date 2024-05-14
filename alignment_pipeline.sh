@@ -127,3 +127,69 @@
 #     out_prefix=$data_dir/$prefix'_max250'
 #     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_140-170_CPM'.bw --binSize 1 --minFragmentLength 140 --maxFragmentLength 170 --extendReads 153 --normalizeUsing CPM
 # done
+
+
+#### RNAseq alignment with bowtie2 and densities with bamCoverage ###################################
+# data_dir=RNAseq_03_2022
+# ref='../genome/YPH499_167'
+# for prefix in 'NG-29104_167_replacement_sample_lib568677_7920_2'
+# do
+#     cutadapt -j $threads -m 50 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o $data_dir/$prefix'_1_trimfiltered'.fastq.gz -p $data_dir/$prefix'_2_trimfiltered'.fastq.gz $data_dir/$prefix'_1'.fastq.gz $data_dir/$prefix'_2'.fastq.gz
+#     out_prefix=$data_dir/$prefix'_trimfiltered'
+#     bowtie2 -p $threads -x $ref -1 $data_dir/$prefix'_1_trimfiltered.fastq.gz' -2 $data_dir/$prefix'_2_trimfiltered.fastq.gz' -S $out_prefix.sam
+#     bash alignment_postprocessing.sh -p $threads -f $out_prefix.sam
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_for'.bw --binSize 1 --filterRNAstrand forward
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_rev'.bw --binSize 1 --filterRNAstrand reverse
+# done
+# ref='../genome/YPH499_197b'
+# for prefix in 'NG-29104_197_2_lib556539_7886_1'
+# do
+#     cutadapt -j $threads -m 50 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o $data_dir/$prefix'_1_trimfiltered'.fastq.gz -p $data_dir/$prefix'_2_trimfiltered'.fastq.gz $data_dir/$prefix'_1'.fastq.gz $data_dir/$prefix'_2'.fastq.gz
+#     out_prefix=$data_dir/$prefix'_trimfiltered'
+#     bowtie2 -p $threads -x $ref -1 $data_dir/$prefix'_1_trimfiltered.fastq.gz' -2 $data_dir/$prefix'_2_trimfiltered.fastq.gz' -S $out_prefix.sam
+#     bash alignment_postprocessing.sh -p $threads -f $out_prefix.sam
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_for'.bw --binSize 1 --filterRNAstrand forward
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_rev'.bw --binSize 1 --filterRNAstrand reverse
+# done
+# ref='../genome/YPH499_237'
+# for prefix in 'NG-29104_237_lib556540_7886_1'
+# do
+#     cutadapt -j $threads -m 50 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o $data_dir/$prefix'_1_trimfiltered'.fastq.gz -p $data_dir/$prefix'_2_trimfiltered'.fastq.gz $data_dir/$prefix'_1'.fastq.gz $data_dir/$prefix'_2'.fastq.gz
+#     out_prefix=$data_dir/$prefix'_trimfiltered'
+#     bowtie2 -p $threads -x $ref -1 $data_dir/$prefix'_1_trimfiltered.fastq.gz' -2 $data_dir/$prefix'_2_trimfiltered.fastq.gz' -S $out_prefix.sam
+#     bash alignment_postprocessing.sh -p $threads -f $out_prefix.sam
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_for'.bw --binSize 1 --filterRNAstrand forward
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_rev'.bw --binSize 1 --filterRNAstrand reverse
+# done
+
+# data_dir=RNAseq_08_2023
+# ref='../genome/YPH499_167'
+# for prefix in 'NG-34139_167_4_lib717029_10297_1'
+# do
+#     cutadapt -j $threads -m 50 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o $data_dir/$prefix'_1_trimfiltered'.fastq.gz -p $data_dir/$prefix'_2_trimfiltered'.fastq.gz $data_dir/$prefix'_1'.fastq.gz $data_dir/$prefix'_2'.fastq.gz
+#     out_prefix=$data_dir/$prefix'_trimfiltered'
+#     bowtie2 -p $threads -x $ref -1 $data_dir/$prefix'_1_trimfiltered.fastq.gz' -2 $data_dir/$prefix'_2_trimfiltered.fastq.gz' -S $out_prefix.sam
+#     bash alignment_postprocessing.sh -p $threads -f $out_prefix.sam
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_for'.bw --binSize 1 --filterRNAstrand forward
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_rev'.bw --binSize 1 --filterRNAstrand reverse
+# done
+# ref='../genome/YPH499_197b'
+# for prefix in 'NG-34139_197_2_27_lib717031_10297_1'
+# do
+#     cutadapt -j $threads -m 50 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o $data_dir/$prefix'_1_trimfiltered'.fastq.gz -p $data_dir/$prefix'_2_trimfiltered'.fastq.gz $data_dir/$prefix'_1'.fastq.gz $data_dir/$prefix'_2'.fastq.gz
+#     out_prefix=$data_dir/$prefix'_trimfiltered'
+#     bowtie2 -p $threads -x $ref -1 $data_dir/$prefix'_1_trimfiltered.fastq.gz' -2 $data_dir/$prefix'_2_trimfiltered.fastq.gz' -S $out_prefix.sam
+#     bash alignment_postprocessing.sh -p $threads -f $out_prefix.sam
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_for'.bw --binSize 1 --filterRNAstrand forward
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_rev'.bw --binSize 1 --filterRNAstrand reverse
+# done
+# ref='../genome/YPH499_237'
+# for prefix in 'NG-34139_237_44_lib717032_10297_1'
+# do
+#     cutadapt -j $threads -m 50 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o $data_dir/$prefix'_1_trimfiltered'.fastq.gz -p $data_dir/$prefix'_2_trimfiltered'.fastq.gz $data_dir/$prefix'_1'.fastq.gz $data_dir/$prefix'_2'.fastq.gz
+#     out_prefix=$data_dir/$prefix'_trimfiltered'
+#     bowtie2 -p $threads -x $ref -1 $data_dir/$prefix'_1_trimfiltered.fastq.gz' -2 $data_dir/$prefix'_2_trimfiltered.fastq.gz' -S $out_prefix.sam
+#     bash alignment_postprocessing.sh -p $threads -f $out_prefix.sam
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_for'.bw --binSize 1 --filterRNAstrand forward
+#     bamCoverage -p $threads -b $out_prefix.sorted.bam -o $out_prefix'_reads_rev'.bw --binSize 1 --filterRNAstrand reverse
+# done

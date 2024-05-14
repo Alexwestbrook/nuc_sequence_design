@@ -26,4 +26,4 @@ rm $filename
 samtools index $prefix.sorted.bam
 
 samtools view -f66 $prefix.sorted.bam | cut -f9 | awk '{print sqrt($0^2)}' > $prefix.sorted.bam.insert_sizes.txt
-samtools view -Mh -L repeats.bed $prefix.sorted.bam | samtools view -f66 | cut -f9 | awk '{print sqrt($0^2)}' > $prefix.sorted.bam.repeat_insert_sizes.txt
+# samtools view -Mh -L repeats.bed $prefix.sorted.bam | samtools view -f66 | cut -f9 | awk '{print sqrt($0^2)}' > $prefix.sorted.bam.repeat_insert_sizes.txt
